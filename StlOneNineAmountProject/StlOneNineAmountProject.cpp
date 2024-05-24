@@ -16,6 +16,8 @@ std::string NumberToString(int number)
 			strResult.push_back('-');
 		if (mod == 2)
 			strResult.push_back('+');
+		/*if (mod == 3)
+			strResult.push_back('*');*/
 		strResult.push_back(digit);
 		number /= 3;
 	}
@@ -64,7 +66,7 @@ int main()
 	std::string strResult;
 	int intResult;
 
-	for (int number{}; number < pow(3, 8); number++)
+	for (int number{}; number < pow(4, 8); number++)
 	{
 		strResult = NumberToString(number);
 		//std::cout << strResult << " = " << StringToResult(strResult) << "\n";
